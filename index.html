@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 100px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            width: 150px;
+            border: 4px solid;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+
+    <div class="buttons">
+        <button onclick="decrement()">Decrement</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="increment()">Increment</button>
+    </div>
+
+    <script>
+        function decrement() {
+            document.getElementById("counter").textContent--;
+            colors()
+        }
+
+        function reset() {
+            document.getElementById("counter").textContent = 0;
+        }
+
+        function increment() {
+            document.getElementById("counter").textContent++;
+        }
+
+        function colors(){
+            if(document.getElementById("counter").textContent > 0) {
+                console.log("Menor que zero, estou negativo")
+            }
+        }
+    </script>
+</body>
+</html>
